@@ -51,33 +51,32 @@ def get_balance(w3, address):
 
 
 def send_transaction(w3, account, to, wage):
-    """Send an authorized transaction to the Ganache blockchain."""
-    # Set gas price strategy
-    w3.eth.setGasPriceStrategy(medium_gas_price_strategy)
-
-    # Convert eth amount to Wei
+    # Convert wage to Wei
     value = w3.toWei(wage, "ether")
 
-    # Calculate gas estimate
-    gasEstimate = w3.eth.estimateGas(
-        {"to": to, "from": account.address, "value": value}
-    )
+    # Estimate gas for the transaction
+    gasEstimate = w3.eth.estimateGas({
+        "from": account.address, 
+        "to": to, 
+        "value": value
+    })
 
-    # Construct a raw transaction
-    raw_tx = {
-        "to": to,
+    # Build a transaction
+    transaction = {
         "from": account.address,
+        "to": to,
         "value": value,
         "gas": gasEstimate,
-        "gasPrice": 0,
+        "gasPrice": w3.eth.gasPrice,
         "nonce": w3.eth.getTransactionCount(account.address),
     }
 
-    # Sign the raw transaction with ethereum account
-    signed_tx = account.signTransaction(raw_tx)
+    # Sign the transaction
+    signed_tx = w3.eth.account.signTransaction(transaction, account.privateKey)
 
-    # Send the signed transactions
+    # Send the transaction
     return w3.eth.sendRawTransaction(signed_tx.rawTransaction)
+
 
 # Streamlit Application
 ################################################################################
