@@ -31,6 +31,9 @@ import streamlit as st
 from crypto_wallet import generate_account, get_balance, send_transaction
 from web3 import Web3
 
+# Load environment variables
+load_dotenv()
+
 w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
 ################################################################################
 # Step 1:
@@ -180,8 +183,6 @@ st.sidebar.write(account.address)
 # @TODO
 # Call `get_balance` function and pass it your account address
 # Write the returned ether balance to the sidebar
-balance = get_balance(w3, account.address)
-st.sidebar.write(f"Account balance: {balance} Ether")
 
 
 ##########################################
@@ -232,9 +233,11 @@ st.sidebar.markdown("## Total Wage in Ether")
 # (`candidate_database[person][3]`) and then multiply this hourly rate by
 # the value of the `hours` variable. Save this calculation’s output as a
 # variable named `wage`.
+wage = candidate_database[person][3] * hours
 
 # * Write the `wage` variable to the Streamlit sidebar by
 # using `st.sidebar.write`.
+st.sidebar.write("Total Wage (ETH): ", wage)
 
 # 2. Now that the application can calculate a candidate’s wage, write the code
 # that will allow a customer (you, in this case) to send an Ethereum blockchain
@@ -243,6 +246,9 @@ st.sidebar.markdown("## Total Wage in Ether")
 # add logic to this `if` statement that sends the appropriate information to
 # the `send_transaction` function (which you imported from the `crypto_wallet`
 # script file). Inside the `if` statement, add the following functionality:
+if st.sidebar.button("Send Transaction"):
+    # Get candidate's address
+    candidate_address = candidate_database[person][1]
 
 # * Call the `send_transaction()` function and pass it three parameters:
 # - Your Ethereum `account` information. (Remember that this `account`
@@ -259,7 +265,7 @@ st.sidebar.markdown("## Total Wage in Ether")
 # * Save the transaction hash that the `send_transaction` function returns
 # as a variable named `transaction_hash`, and have it display on the
 # application’s web interface.
-
+transaction_hash = send_transaction(account, candidate_address, wage)
 ##########################################
 # Step 2 - Part 1:
 # * Write the equation that calculates the candidate’s wage. This equation
