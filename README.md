@@ -5,7 +5,7 @@
 ![Alt text](Starter_Code/Images/concept.png)
 ## *A New Era Of Fintech Payments*
 
-## Project Backstory 🏙️
+## Project Backstory 🏙️  
 
 **Welcome aboard!** You're the lead developer at an exciting startup, building a revolutionary platform - KryptoJobs2Go! This innovative application acts as a bridge connecting customers with fintech professionals. The real game-changer? Our customers can instantly pay the professionals they hire with cryptocurrency! 💷
 
