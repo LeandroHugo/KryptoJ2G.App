@@ -140,7 +140,7 @@ def get_people():
 
 # Streamlit Code
 st.markdown("# KryptoJobs2Go! 💼")
-st.markdown("## Hire A Fintech Professional! 👩‍💻")
+st.markdown("## Hire A High Fashion Fintech Professional! 👩‍💻")
 st.text(" \n")
 
 # Streamlit Sidebar Code - Start
