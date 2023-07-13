@@ -1,25 +1,17 @@
-# Cryptocurrency Wallet
-################################################################################
-
-# This file contains the Ethereum transaction functions that you have created throughout this module’s lessons.
-# By using import statements, you will integrate this `crypto_wallet.py` Python script
-# into the KryptoJobs2Go interface program that is found in the `krypto_jobs.py` file.
-
-################################################################################
 # Imports
 import os
 import requests
 from dotenv import load_dotenv
-
-load_dotenv()
 from bip44 import Wallet
 from web3 import Account
 from web3 import middleware
 from web3.gas_strategies.time_based import medium_gas_price_strategy
+import streamlit as st
 
-################################################################################
+# Load environment variables
+load_dotenv()
+
 # Wallet functionality
-
 def generate_account():
     """Create a digital wallet and Ethereum account from a mnemonic seed phrase."""
     # Fetch mnemonic from environment variable.
@@ -75,3 +67,56 @@ def send_transaction(w3, account, to, wage):
 
     # Send the signed transactions
     return w3.eth.sendRawTransaction(signed_tx.rawTransaction)
+
+# Streamlit Code
+st.markdown("# KryptoJobs2Go!")
+st.markdown("## Hire A Fintech Professional!")
+st.text(" \n")
+
+# Streamlit Sidebar Code - Start
+st.sidebar.markdown("## Client Account Address and Ethernet Balance in Ether")
+
+# Generate account and display account address and balance
+account = generate_account()
+st.sidebar.write("Account Address: ", account.address)
+st.sidebar.write("Account Balance: ", get_balance(w3, account.address), "ETH")
+
+# Create a select box to chose a FinTech Hire candidate
+person = st.sidebar.selectbox("Select a Person", people)
+
+# Create a input field to record the number of hours the candidate worked
+hours = st.sidebar.number_input("Number of Hours")
+
+st.sidebar.markdown("## Candidate Name, Hourly Rate, and Ethereum Address")
+
+# Identify the FinTech Hire candidate
+candidate = candidate_database[person][0]
+st.sidebar.write("Name: ", candidate)
+
+# Identify the KryptoJobs2Go candidate's hourly rate
+hourly_rate = candidate_database[person][3]
+st.sidebar.write("Hourly Rate (ETH): ", hourly_rate)
+
+# Identify the KryptoJobs2Go candidate's Ethereum Address
+candidate_address = candidate_database[person][1]
+st.sidebar.write("Ethereum Address: ", candidate_address)
+
+# Calculate wage
+wage = hourly_rate * hours
+st.sidebar.markdown("## Total Wage in Ether")
+st.sidebar.write(wage)
+
+if st.sidebar.button("Send Transaction"):
+    # Send transaction and get transaction hash
+    transaction_hash = send_transaction(account, candidate_address, wage)
+
+    # Display transaction hash
+    st.sidebar.markdown("#### Validated Transaction Hash")
+    st.sidebar.write(transaction_hash)
+
+    # Celebrate your successful payment
+    st.balloons()
+
+# The function that starts the Streamlit application
+# Writes KryptoJobs2Go candidates to the Streamlit page
+get_people()
