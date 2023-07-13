@@ -1,6 +1,3 @@
-Here's the code you requested:
-
-```python
 # Cryptocurrency Wallet
 ################################################################################
 
