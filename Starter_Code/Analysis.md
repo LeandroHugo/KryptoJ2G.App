@@ -56,12 +56,12 @@ After you've selected your model and set the number of hours worked, it's time t
 2. Once the transaction is sent, navigate to the `Transactions` section in Ganache. 🕹️🔍
 
 3. Take a screenshot of your address balance and history in Ganache. This will serve as a record of your transaction. 📸💰
-![Alt text](Images/Home2.png)
+![Alt text](Images/Home2.png)![Alt text](Images/Home3.png)
 4. Save this screenshot in the `README.md` file of your GitHub repository for this Challenge assignment. This will allow others to see the transaction you've made. 📁💾
 
 5. Take a screenshot of the transaction details in Ganache. This will provide a detailed view of the transaction. 📸📝
-![Alt text](Images/Home3.png)
-6. Save this screenshot in the same `README.md` file. This will complete your transaction record. 📁💾
 
+6. Save this screenshot in the same `README.md` file. This will complete your transaction record. 📁💾
+![Alt text](Images/Home4.png)
 By following these steps, you can ensure that your transaction is successfully recorded and visible for others to see. This transparency is one of the many benefits of using blockchain technology! 🌐🔗
 🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
