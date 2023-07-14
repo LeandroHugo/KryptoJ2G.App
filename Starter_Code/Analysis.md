@@ -46,7 +46,7 @@ KryptoJobs2Go is more than just a platform - it's a statement. It's about embrac
 So put on your best outfit, step onto the blockchain runway, and join the High Fashion Fintech revolution with KryptoJobs2Go! 🚀🌟
 ![Alt text](Images/Fashion3.png)
 
-🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
 ## 📸 Capturing Your Transaction: A Step-by-Step Guide
 
 After you've selected your model and set the number of hours worked, it's time to make the payment. Here's how you can do it and capture the transaction details:
