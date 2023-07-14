@@ -44,3 +44,22 @@ KryptoJobs2Go is more than just a platform - it's a statement. It's about embrac
 
 So put on your best outfit, step onto the blockchain runway, and join the High Fashion Fintech revolution with KryptoJobs2Go! 🚀🌟
 ![Alt text](Images/Fashion3.png)
+
+🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟🌟
+## 📸 Capturing Your Transaction: A Step-by-Step Guide
+
+After you've selected your model and set the number of hours worked, it's time to make the payment. Here's how you can do it and capture the transaction details:
+![Alt text](Images/Home.png)
+1. Click the `Send Transaction` button. This will sign and send the transaction using your Ethereum account information. 🖱️💼
+
+2. Once the transaction is sent, navigate to the `Transactions` section in Ganache. 🕹️🔍
+
+3. Take a screenshot of your address balance and history in Ganache. This will serve as a record of your transaction. 📸💰
+
+4. Save this screenshot in the `README.md` file of your GitHub repository for this Challenge assignment. This will allow others to see the transaction you've made. 📁💾
+
+5. Take a screenshot of the transaction details in Ganache. This will provide a detailed view of the transaction. 📸📝
+
+6. Save this screenshot in the same `README.md` file. This will complete your transaction record. 📁💾
+
+By following these steps, you can ensure that your transaction is successfully recorded and visible for others to see. This transparency is one of the many benefits of using blockchain technology! 🌐🔗
