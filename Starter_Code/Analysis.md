@@ -8,6 +8,7 @@ KryptoJobs2Go is a revolutionary platform that allows you to hire top-notch fint
 
 ## 👠 How does it work?
 ![Alt text](Images/Pink1.png)
+
 Our platform is powered by a Python script that creates a digital wallet and Ethereum account from a mnemonic seed phrase. This wallet is used to manage transactions on the Ethereum blockchain. 
 
 The script also includes functions to:
